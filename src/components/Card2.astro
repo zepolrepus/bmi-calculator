@@ -7,6 +7,7 @@ interface Props {
 
 const { title, body, icon } = Astro.props;
 ---
+
 <div class="card">
     <img src={ icon } alt = { icon }>
     <h3> { title }</h3>
@@ -16,21 +17,30 @@ const { title, body, icon } = Astro.props;
 <style>
     .card {
         width: 365px;
-    }
-    .card img {
-        width: 64px;
-        height: 64px;
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 32px;
+        gap: 32px;
     }
     .card h3 {
-        font-size: 24px;
+        color: var(--Gunmetal);
+        /* Heading S */
+        font-family: Inter;
+        font-size: 20px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        letter-spacing: -1.2px;
-        padding: 24px 0px;
+        letter-spacing: -1px;
     }
     .card p {
-        color: var(--Dark-Electric-Blue);
+        color: var(--Dark-Electric-Blue, #5E6E85);
+        /* Body M */
+        font-family: Inter;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
